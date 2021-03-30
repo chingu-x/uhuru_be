@@ -1,11 +1,13 @@
-import express from "express";
+import Fastify from "fastify";
 
 import routes from "./routes.js";
 
-export default function buildApp() {
-  const app = express();
+export default async function buildApp() {
+  const fastify = Fastify({
+    logger: true,
+  });
 
-  app.use("/user", routes);
+  fastify.register(routes, { prefix: "/user" });
 
-  return app;
+  return fastify;
 }
