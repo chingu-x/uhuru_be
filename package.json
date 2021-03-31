@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/jdmedlock/chs73be#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "fastify": "^3.14.1",
     "fastify-cors": "^5.2.0",
     "node-mailjet": "^3.3.1"

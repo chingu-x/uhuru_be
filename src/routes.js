@@ -4,23 +4,11 @@ import nodemailjet from "node-mailjet"
 export default async function routes(fastify) {
   fastify.register(CorsPlugin, { origin: true })
   
-  /*
-  fastify.post("/user", async function createUser(request, reply) {
-    const newUser = request.body
-
-    if (!newUser) {
-      throw new Error("Error creating user")
-    }
-
-    reply.status(201).send(newUser)
-  })
-  */
-
-  fastify.post("/addcomment", async function addComment(request, reply) {
-    //const comment = request.body;
-
+  fastify.put("/addcomment", async function sendMessage(request, reply) {
+    console.log('...addcomment body: ', request.body)
+    
     const mailjet = nodemailjet
-      .connect('tbd', 'tbd')
+      .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
     const mjreq = mailjet
       .post("send", {'version': 'v3.1'})
@@ -28,8 +16,8 @@ export default async function routes(fastify) {
         "Messages":[
           {
             "From": {
-              "Email": "jdmedlock@gmail.com",
-              "Name": "Jim"
+              "Email": `${ request.body.from }`,
+              "Name": `${ request.body.name }`
             },
             "To": [
               {
@@ -37,30 +25,22 @@ export default async function routes(fastify) {
                 "Name": "Jim"
               }
             ],
-            "Subject": "CHS73 - New comment from ",
-            "TextPart": "My first Mailjet email",
-            "HTMLPart": "<h3>New comment from someone",
+            "Subject": `CHS73 - New comment from ${ request.body.name }`,
+            "TextPart": `${ request.body.message }`,
+            "HTMLPart": `<p>${ request.body.message }</p>`,
           }
         ]
       })
     mjreq
       .then((result) => {
         console.log(result.body)
-        reply.status(201).send("Comment added: ", result.body)
+        reply.status(204).send("Comment added: ", result.body)
       })
       .catch((err) => {
         console.log(err.statusCode)
         reply.status(401).send("Error commenting: ", err)
       })
+    
   });
 
-  fastify.get("/:user_id", async function getUser(request, reply) {
-    const user = {
-      id: request.params.user_id,
-      first_name: "Bobinsky",
-      last_name: "Oso",
-    }
-
-    reply.send(user);
-  })
 }
