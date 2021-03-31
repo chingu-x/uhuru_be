@@ -6,8 +6,8 @@ dotEnv.config()
 const fastify = await buildApp()
 
 try {
-  await fastify.listen(process.env.PORT || 8080)
-  console.log("Listening on port: ", process.env.PORT || 8080)
+  await fastify.listen(process.env.PORT, '0.0.0.0')
+  console.log("Listening on port: ", process.env.PORT)
 } catch (error) {
   fastify.log.error(error)
   process.exit(1)
