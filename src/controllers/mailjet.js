@@ -6,7 +6,7 @@ export const sendMessage = async (request, reply) => {
   const mailjet = nodemailjet
     .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
-  const mjreq = mailjet
+  const mailjetReq = mailjet
     .post("send", {'version': 'v3.1'})
     .request({
       "Messages":[
@@ -27,13 +27,13 @@ export const sendMessage = async (request, reply) => {
         }
       ]
     })
-  mjreq
+  mailjetReq
     .then((result) => {
       console.log(result.body)
-      reply.status(204).send("Comment added: ", result.body)
+      reply.status(200).send('Comment added: ', result.body)
     })
     .catch((err) => {
-      console.log(err.statusCode)
-      reply.status(401).send("Error commenting: ", err)
-    })   
+      console.log('Error sending comment: ', err)
+      reply.status(err.statusCode).send('Error sending comment')
+    })
 }
