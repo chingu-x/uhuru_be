@@ -17,8 +17,8 @@ export const sendMessage = async (request, reply) => {
           },
           "To": [
             {
-              "Email": "jdmedlock@gmail.com",
-              "Name": "Jim"
+              "Email": `${ process.env.EMAIL_RECIPIENT_ADDR }`,
+              "Name": `${ process.env.EMAIL_RECIPIENT_NAME }`
             }
           ],
           "Subject": `CHS73 - New comment from ${ request.body.name }`,
