@@ -1,5 +1,5 @@
-import dotEnv from "dotenv"
-import buildApp from "./app.js"
+import dotEnv from 'dotenv'
+import buildApp from './app.js'
 
 dotEnv.config()
 

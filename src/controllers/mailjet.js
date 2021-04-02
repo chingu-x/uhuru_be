@@ -27,7 +27,7 @@ export const sendMessage = async (request, reply) => {
     })
   return mailjetReq
     .then(async (result) => {
-      await reply.code(200)
+      await reply.code(200).send({message: "Message successfully sent"})
     })
     .catch(async (err) => {
       console.log('Error sending comment: ', err)

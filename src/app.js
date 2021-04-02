@@ -1,5 +1,6 @@
 import Fastify from 'fastify'
 import formbody from 'fastify-formbody'
+import fastifyCors from 'fastify-cors'
 import { chsRoutes } from './routes/routes.js'
 
 export default async function buildApp() {
@@ -8,7 +9,7 @@ export default async function buildApp() {
   })
 
   fastify.register(formbody)
-
+  fastify.register(fastifyCors)
 
   // fastify.register(routes, { prefix: "/" })
   // Register routes to handle blog posts
