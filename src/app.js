@@ -12,9 +12,9 @@ export default async function buildApp() {
 
   // fastify.register(routes, { prefix: "/" })
   // Register routes to handle blog posts
-  chsRoutes.forEach((route, index) => {
+  for (let route of chsRoutes) {
     fastify.route(route)
-  })
+  }
 
   return fastify
 }

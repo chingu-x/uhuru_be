@@ -1,8 +1,6 @@
 import nodemailjet from "node-mailjet"
 
-export const sendMessage = async (request, reply) => {
-  console.log('...addcomment body: ', request.body)
-  
+export const sendMessage = async (request, reply) => {  
   const mailjet = nodemailjet
     .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
@@ -27,13 +25,15 @@ export const sendMessage = async (request, reply) => {
         }
       ]
     })
-  mailjetReq
-    .then((result) => {
-      console.log(result.body)
-      reply.status(200).send('Comment added: ', result.body)
+  return mailjetReq
+    .then(async (result) => {
+      await reply.send()
+      console.log('here 1')
     })
-    .catch((err) => {
+    .catch(async (err) => {
       console.log('Error sending comment: ', err)
-      reply.status(err.statusCode).send('Error sending comment')
+      await reply.send(err)
+      console.log('here 2')
     })
+  console.log('here 3')
 }
