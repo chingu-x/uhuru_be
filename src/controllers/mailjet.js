@@ -27,13 +27,10 @@ export const sendMessage = async (request, reply) => {
     })
   return mailjetReq
     .then(async (result) => {
-      await reply.send()
-      console.log('here 1')
+      await reply.code(200)
     })
     .catch(async (err) => {
       console.log('Error sending comment: ', err)
-      await reply.send(err)
-      console.log('here 2')
+      await reply.code(500).send(err)
     })
-  console.log('here 3')
 }
