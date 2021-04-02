@@ -1,13 +1,21 @@
-import Fastify from "fastify";
-
-import routes from "./routes.js";
+import Fastify from 'fastify'
+import formbody from 'fastify-formbody'
+import fastifyCors from 'fastify-cors'
+import { chsRoutes } from './routes/routes.js'
 
 export default async function buildApp() {
   const fastify = Fastify({
     logger: true,
-  });
+  })
 
-  fastify.register(routes, { prefix: "/user" });
+  fastify.register(formbody)
+  fastify.register(fastifyCors)
 
-  return fastify;
+  // fastify.register(routes, { prefix: "/" })
+  // Register routes to handle blog posts
+  for (let route of chsRoutes) {
+    fastify.route(route)
+  }
+
+  return fastify
 }

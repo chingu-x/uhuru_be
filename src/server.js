@@ -1,10 +1,14 @@
-import buildApp from "./app.js";
+import dotEnv from 'dotenv'
+import buildApp from './app.js'
 
-const fastify = await buildApp();
+dotEnv.config()
+
+const fastify = await buildApp()
 
 try {
-  await fastify.listen(3000);
+  await fastify.listen(process.env.PORT, '0.0.0.0')
+  console.log('Listening on port: ', process.env.PORT)
 } catch (error) {
-  fastify.log.error(error);
-  process.exit(1);
+  fastify.log.error('Error: ', error)
+  process.exit(1)
 }
