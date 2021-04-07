@@ -10,8 +10,8 @@ export const sendMessage = async (request, reply) => {
       "Messages":[
         {
           "From": {
-            "Email": `${ request.body.from }`,
-            "Name": `${ request.body.name }`
+            "Email": `${ process.env.EMAIL_SENDER_ADDR }`,
+            "Name": `${ process.env.EMAIL_SENDER_NAME }`
           },
           "To": [
             {
