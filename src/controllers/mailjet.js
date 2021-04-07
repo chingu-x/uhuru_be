@@ -10,8 +10,8 @@ export const sendMessage = async (request, reply) => {
       "Messages":[
         {
           "From": {
-            "Email": `${ request.body.from }`,
-            "Name": `${ request.body.name }`
+            "Email": `${ process.env.EMAIL_SENDER_ADDR }`,
+            "Name": `${ process.env.EMAIL_SENDER_NAME }`
           },
           "To": [
             {
@@ -21,7 +21,7 @@ export const sendMessage = async (request, reply) => {
           ],
           "Subject": `CHS73 - New comment from ${ request.body.name }`,
           "TextPart": `${ request.body.message }`,
-          "HTMLPart": `<p>${ request.body.message }</p>`,
+          "HTMLPart": `<h3>Email from: ${ request.body.name }</h3><h3>Email address: (${ request.body.from })</h3><p>${ request.body.message }</p>`,
         }
       ]
     })
