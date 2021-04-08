@@ -4,6 +4,9 @@ export const sendMessage = async (request, reply) => {
   const mailjet = nodemailjet
     .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
+  console.log(`\nMessage Received from ${ request.body.name } email: ${ request.body.from }`)
+  console.log(`Message body: ${ request.body.message }`)
+
   const mailjetReq = mailjet
     .post("send", {'version': 'v3.1'})
     .request({
