@@ -5,11 +5,10 @@ export const sendMessage = async (request, reply) => {
     .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
   console.log(`\nMessage Received from ${ request.body.name } email: ${ request.body.from }`)
-  console.log(`Message body: ${ request.body.message }`)
   console.log(`Street: ${ request.body.street }`)
   console.log(`City: ${ request.body.city } State: ${ request.body.state } Zip: ${ request.body.zipcode }`)
-  console.log(`Phone: ${ request.body.phone }`)
-  console.log(`Volunteer: ${ request.body.volunteer }`)
+  console.log(`Phone: ${ request.body.phone } Volunteer: ${ request.body.volunteer }`)
+  console.log(`Message body: ${ request.body.message }`)
 
   const mailjetReq = mailjet
     .post("send", {'version': 'v3.1'})
