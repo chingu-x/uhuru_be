@@ -1,6 +1,6 @@
-import nodemailjet from "node-mailjet"
+const nodemailjet = require("node-mailjet")
 
-export const sendMessage = async (request, reply) => {  
+const sendMessage = async (request, reply) => {  
   const mailjet = nodemailjet
     .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
@@ -73,3 +73,5 @@ export const sendMessage = async (request, reply) => {
       await reply.code(500).send(err)
     })
 }
+
+module.exports = sendMessage
