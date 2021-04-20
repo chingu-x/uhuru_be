@@ -4,8 +4,9 @@ const { ApolloServer } = require('apollo-server-express')
 const express = require('express')
 const typeDefs = require('./schema/schema')
 const resolvers = require('./schema/resolvers')
+const chsRoutes = require('./routes/routes')
 
-require("dotenv").config();
+require('dotenv').config()
 
 //graphql server
 
@@ -30,11 +31,11 @@ const apolloServer = new ApolloServer({
   resolvers,
 })
 
-//express server
-const app = express();
+const app = express()
+app.get('/', require('./controllers/wakeup'))
 
 apolloServer.applyMiddleware({ app })
 
 app.listen(process.env.PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${process.env.PORT}`);
+  console.log(`🚀 Server is running at http://localhost:${process.env.PORT}`)
 })

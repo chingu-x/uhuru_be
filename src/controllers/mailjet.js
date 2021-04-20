@@ -66,11 +66,11 @@ const sendMessage = async (request, reply) => {
     })
   return mailjetReq
     .then(async (result) => {
-      await reply.code(200).send({ status: "Message successfully sent" })
+      await reply.status(200).send({ status: "Message successfully sent" })
     })
     .catch(async (err) => {
       console.log('Error sending comment: ', err)
-      await reply.code(500).send(err)
+      await reply.status(500).send(err)
     })
 }
 
