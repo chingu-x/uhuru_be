@@ -8,18 +8,6 @@ const typeDefs = gql`
     AUTO_LOGGED_OUT
   }
 
-  input SendMessageInput {
-    fromEmail: String!
-    fullName: String!
-    message: String!
-    street: String
-    city: String
-    state: String
-    zipcode: Int
-    phone: String
-    volunteer: Boolean
-  }
-
   type MutationResult {
     message: String
     code: String
@@ -38,7 +26,16 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    sendMessage(message: SendMessageInput!): SendMessageMutationResponse
+    sendMessage(    
+      fromEmail: String!
+      fullName: String!
+      message: String!
+      street: String
+      city: String
+      state: String
+      zipcode: Int
+      phone: String
+      volunteer: Boolean): SendMessageMutationResponse
     wakeUp: WakeUpMutationResponse
   }
 `;

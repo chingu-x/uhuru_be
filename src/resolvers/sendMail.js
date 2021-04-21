@@ -2,7 +2,7 @@ const nodemailjet = require("node-mailjet")
 
 const sendMail = (_, __, context) => {
   const { fromEmail, fullName, message, street, city,
-    state, zipcode, phone, volunteer } = __.message
+    state, zipcode, phone, volunteer } = __
   const mailjet = nodemailjet
     .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_SECRET_KEY)
 
