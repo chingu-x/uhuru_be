@@ -12,6 +12,10 @@ const sendMail = (_, __, context) => {
   console.log(`Phone: ${ phone } Volunteer: ${ volunteer }`)
   console.log(`Message body: ${ message }`)
 
+  const getVolunteerStatus = () => {
+    return volunteer ? "Yes": "No"
+  }
+
   const mailjetReq = mailjet
     .post("send", {'version': 'v3.1'})
     .request({
@@ -33,7 +37,7 @@ const sendMail = (_, __, context) => {
             Street: ${ street }\r\n \
             City: ${ city } State: ${ state } Zip: ${ zipcode }\r\n \
             Phone: ${ phone }
-            Volunteer to help: ${ volunteer }\r\n \
+            Volunteer to help: ${ getVolunteerStatus() }\r\n \
             Message from classmate:\r\n ${ message }
           `,
           "HTMLPart": ` \
@@ -56,7 +60,7 @@ const sendMail = (_, __, context) => {
               <span style=\"font-weight: normal; font-size: medium;\">${ phone }</span> \
             </div> \
             <div style=\"margin-top: .25rem; font-weight: bold; font-size: medium;\">Volunteer to help:  \
-              <span style=\"font-weight: normal; font-size: medium;\">${ volunteer }</span>
+              <span style=\"font-weight: normal; font-size: medium;\">${ getVolunteerStatus() }</span>
             </div>\ 
             <div style=\"margin-top: 1rem; font-weight: bold; font-size: medium;\">Message from classmate:</div>\ 
             <div style=\"margin-top: .25rem; font-size: medium;\">
