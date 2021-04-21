@@ -16,7 +16,7 @@ const typeDefs = gql`
     city: String
     state: String
     zipcode: Int
-    phone: Int
+    phone: String
     volunteer: Boolean
   }
 
