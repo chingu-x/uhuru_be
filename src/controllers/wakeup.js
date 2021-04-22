@@ -1,5 +1,7 @@
 
-export const wakeUp = async (request, reply) => {  
+const wakeUp = (request, reply) => {  
   console.log('wakeUp called')
-  await reply.code(200).send({ status: "Awake" })
+  reply.status(200).send({ status: "Awake" })
 }
+
+module.exports = wakeUp

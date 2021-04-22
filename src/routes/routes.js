@@ -1,7 +1,7 @@
-import { sendMessage } from '../controllers/mailjet.js'
-import { wakeUp } from '../controllers/wakeup.js'
+const { sendMessage } = require('../controllers/mailjet.js')
+const { wakeUp } = require('../controllers/wakeup.js')
 
-export const chsRoutes = [
+const chsRoutes = [
     {
         method: 'GET',
         url: '/wakeup',
@@ -13,3 +13,5 @@ export const chsRoutes = [
         handler: sendMessage
     },
 ]
+
+module.exports = chsRoutes

@@ -2,8 +2,7 @@
   "name": "chs73be",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
@@ -21,10 +20,13 @@
   },
   "homepage": "https://github.com/jdmedlock/chs73be#readme",
   "dependencies": {
+    "apollo-server-express": "^2.18.0-rc.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "fastify": "^3.14.1",
-    "fastify-cors": "^5.2.0",
-    "fastify-formbody": "^5.0.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
     "node-mailjet": "^3.3.1"
   },
   "devDependencies": {
