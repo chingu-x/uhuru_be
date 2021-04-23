@@ -1,17 +1,9 @@
-const { sendMessage } = require('../controllers/mailjet.js')
-const { wakeUp } = require('../controllers/wakeup.js')
+const express = require('express');
+const { wakeUp } = require('../controllers/wakeup');
 
-const chsRoutes = [
-    {
-        method: 'GET',
-        url: '/wakeup',
-        handler: wakeUp
-    },
-    {
-        method: 'POST',
-        url: '/message',
-        handler: sendMessage
-    },
-]
+const router = express.Router();
 
-module.exports = chsRoutes
+router.route('/wakeup')
+    .get(wakeUp)
+
+module.exports = router
