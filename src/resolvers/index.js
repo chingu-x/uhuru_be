@@ -1,4 +1,5 @@
 const sendMail = require('./sendMail')
+const sendTigerHunt = require('./sendTigerHunt')
 
 const resolvers = {
   Query: {
@@ -17,6 +18,15 @@ const resolvers = {
       return {
         result: {
           message: "sendMessage invoked",
+          code: "OK"
+        }
+      }
+    },
+    sendTigerHunt: (_, __, context) => {
+      sendTigerHuntMail(_, __, context)
+      return {
+        result: {
+          message: "sendTigerHunt invoked",
           code: "OK"
         }
       }

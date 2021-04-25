@@ -17,6 +17,10 @@ const typeDefs = gql`
     result: MutationResult
   }
 
+  type SendTigerHuntMutationResponse {
+    result: MutationResult
+  }
+
   type WakeUpMutationResponse {
     result: MutationResult
   }
@@ -35,7 +39,22 @@ const typeDefs = gql`
       state: String
       zipcode: Int
       phone: String
-      volunteer: Boolean): SendMessageMutationResponse
+      volunteer: Boolean
+    ): SendMessageMutationResponse
+
+    sendTigerHunt(    
+      fromEmail: String!
+      fromName: String!
+      classmateName: String!
+      classmateStreet: String
+      classmateCity: String
+      classmateState: String
+      classmateZipcode: Int
+      classmatePhone: String
+      isClassmateDeceased: Boolean
+      classmateInfo: String
+    ): SendTigerHuntMutationResponse
+
     wakeUp: WakeUpMutationResponse
   }
 `;
