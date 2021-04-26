@@ -49,7 +49,7 @@ const sendTigerHunt = (_, __, context) => {
               <span style=\"font-weight: bold; font-size: medium;\">Email address: </span> \
               <span style=\"font-weight: normal; font-size: medium;\">${ fromEmail }</span> \
             </div> \
-            <div style=\"font-weight: bold; font-size: medium;\">Classmate Info: \
+            <div style=\"font-weight: bold; font-size: medium; margin-top: 1rem;\">Classmate Info: \
               <span style=\"font-weight: normal; font-size: medium;\">${ classmateName } </span>\
               <span style=\"font-weight: bold; font-size: medium;\">Email address: </span> \
               <span style=\"font-weight: normal; font-size: medium;\">${ classmateEmail }</span> \
