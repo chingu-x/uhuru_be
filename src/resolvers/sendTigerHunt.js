@@ -1,6 +1,6 @@
 const nodemailjet = require("node-mailjet")
 
-const sendTigerHuntMail = (_, __, context) => {
+const sendTigerHunt = (_, __, context) => {
   const { fromEmail, fromName, classmateName, classmateEmail, 
     classmateStreet, classmateCity, classmateState, classmateZipcode,
     classmatePhone, isClassmateDeceased, classmateInfo } = __
@@ -33,9 +33,10 @@ const sendTigerHuntMail = (_, __, context) => {
               "Name": `${ process.env.EMAIL_RECIPIENT_NAME }`
             }
           ],
-          "Subject": `CHS73 - TigerHunt Info from ${ fullName }`,
+          "Subject": `CHS73 - TigerHunt Info from ${ fromName }`,
           "TextPart": `
-            Email from: ${ classmateName } Email address: ${ classmateEmail }\r\n \
+            From name: ${ fromName } email: ${ fromEmail } \
+            Classmate name: ${ classmateName } Email: ${ classmateEmail }\r\n \
             Street: ${ classmateStreet }\r\n \
             City: ${ classmateCity } State: ${ classmateState } Zip: ${ classmateZipcode }\r\n \
             Phone: ${ classmatePhone }
@@ -66,7 +67,7 @@ const sendTigerHuntMail = (_, __, context) => {
             <div style=\"margin-top: .25rem; font-weight: bold; font-size: medium;\">Phone: \
               <span style=\"font-weight: normal; font-size: medium;\">${ classmatePhone }</span> \
             </div> \
-            <div style=\"margin-top: .25rem; font-weight: bold; font-size: medium;\">Volunteer to help:  \
+            <div style=\"margin-top: .25rem; font-weight: bold; font-size: medium;\">Deceased:  \
               <span style=\"font-weight: normal; font-size: medium;\">${ getDeceasedStatus() }</span>
             </div>\ 
             <div style=\"margin-top: 1rem; font-weight: bold; font-size: medium;\">Classmate info:</div>\ 
@@ -81,20 +82,20 @@ const sendTigerHuntMail = (_, __, context) => {
     .then(async (result) => {
       return {
         result: {
-          message: "Message successfully emailed",
+          message: "TigerHunt successfully emailed",
           code: 200
         }
       }
     })
     .catch(async (err) => {
-      console.log('Error sending comment: ', err)
+      console.log('Error sending TigerHunt: ', err)
       return {
         result: {
-          message: "Message email failed",
+          message: "TigerHunt email failed",
           code: 500
         }
       }
     })
 }
 
-module.exports = sendTigerHuntMail
+module.exports = sendTigerHunt

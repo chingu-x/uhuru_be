@@ -46,6 +46,7 @@ const typeDefs = gql`
       fromEmail: String!
       fromName: String!
       classmateName: String!
+      classmateEmail: String
       classmateStreet: String
       classmateCity: String
       classmateState: String

@@ -23,7 +23,7 @@ const resolvers = {
       }
     },
     sendTigerHunt: (_, __, context) => {
-      sendTigerHuntMail(_, __, context)
+      sendTigerHunt(_, __, context)
       return {
         result: {
           message: "sendTigerHunt invoked",
