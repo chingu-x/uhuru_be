@@ -45,15 +45,16 @@ const typeDefs = gql`
     sendTigerHunt(    
       fromEmail: String!
       fromName: String!
-      classmateName: String!
-      classmateEmail: String
-      classmateStreet: String
-      classmateCity: String
-      classmateState: String
-      classmateZipcode: Int
-      classmatePhone: String
-      isClassmateDeceased: Boolean
-      classmateInfo: String
+      contactName: String!
+      contactEmail: String
+      contactStreet: String
+      contactCity: String
+      contactState: String
+      contactZipcode: Int
+      contactPhone: String
+      isContactDeceased: Boolean
+      contactInfo: String
+      contactType: String
     ): SendTigerHuntMutationResponse
 
     wakeUp: WakeUpMutationResponse
