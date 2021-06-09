@@ -1,5 +1,5 @@
 {
-  "name": "chs73be",
+  "name": "uhuru_be",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdmedlock/chs73be.git"
+    "url": "git+https://github.com/chingu-x/uhuru_be.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jdmedlock/chs73be/issues"
+    "url": "https://github.com/chingu-x/uhuru_be/issues"
   },
-  "homepage": "https://github.com/jdmedlock/chs73be#readme",
+  "homepage": "https://github.com/chingu-x/uhuru_be#readme",
   "dependencies": {
     "apollo-server-express": "^2.18.0-rc.1",
     "body-parser": "^1.19.0",
