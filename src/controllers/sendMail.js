@@ -10,7 +10,7 @@ const sendMail = asyncHandler(async (req, res) => {
   const { fromEmail, fromName, toEmail, toName, 
     subject, textMessage, htmlMessage } = req.body
 
-  console.log(`New Message Received:`)
+  console.log(`New request received by sendMail:`)
   console.log(`fromEmail: ${ fromEmail }`)
   console.log(`fromName: ${ fromName }`)
   console.log(`toEmail: ${ toEmail }`)

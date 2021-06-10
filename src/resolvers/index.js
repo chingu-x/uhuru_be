@@ -1,5 +1,3 @@
-const sendMail = require('./sendMail')
-
 const resolvers = {
   Query: {
     wakeUp: (_, __, context) => {
@@ -12,15 +10,6 @@ const resolvers = {
     }
   },
   Mutation: {
-    sendMessage: (_, __, context) => {
-      sendMail(_, __, context)
-      return {
-        result: {
-          message: "sendMessage invoked",
-          code: "OK"
-        }
-      }
-    },
     wakeUp: (_, __, context) => {
       return {
         result: {

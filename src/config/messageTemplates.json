@@ -1,0 +1,9 @@
+[
+  {
+    "messageType": "CHINGU_APPLICATION_ACK",
+    "fromEmail": "support@chingu.io",
+    "fromName": "Chingu Support Team",
+    "templateID": 2952634,
+    "templateLanguage": true
+  }
+]
