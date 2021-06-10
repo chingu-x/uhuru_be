@@ -2,6 +2,7 @@
 
 const { ApolloServer } = require('apollo-server-express')
 const express = require('express')
+const bodyParser = require('body-parser');
 const restRoutes = require('./routes/routes')
 const typeDefs = require('./schema/schema')
 const resolvers = require('./resolvers')
@@ -14,6 +15,9 @@ const apolloServer = new ApolloServer({
 })
 
 const app = express()
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(bodyParser.raw());
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
