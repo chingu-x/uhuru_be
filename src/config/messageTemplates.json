@@ -5,5 +5,11 @@
     "fromName": "Chance & Jim",
     "templateID": 2952634,
     "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_SUBMISSION_ACK",
+    "fromEmail": "support@chingu.io",
+    "fromName": "Chance & Jim",
+    "templateID": 2955469,
+    "templateLanguage": true
   }
 ]
