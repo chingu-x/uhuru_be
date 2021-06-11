@@ -26,10 +26,6 @@ const messageManager = asyncHandler(async (req, res) => {
     .request({
       "Messages":[
         {
-          "From": {
-            "Email": `${ messageTemplate.fromEmail }`,
-            "Name": `${ messageTemplate.fromName }`
-          },
           "To": [
             {
               "Email": `${ toEmail }`,
@@ -39,8 +35,7 @@ const messageManager = asyncHandler(async (req, res) => {
           "TemplateID": messageTemplate.templateID,
           "TemplateLanguage": true,
           "Variables": {
-            "toName": `${ toName }`,
-            "fromName": `${ messageTemplate.fromName }`
+            "toName": `${ toName }`
           }
         }
       ]
