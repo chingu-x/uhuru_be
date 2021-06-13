@@ -3,12 +3,13 @@ const nodemailjet = require("node-mailjet")
 const messageTemplates = require('../config/messageTemplates.json')
 
 const messageManager = asyncHandler(async (req, res) => {
-  const { messageType, toEmail, toName } = req.body
+  const { messageType, toEmail, toName, reason } = req.body
 
   console.log(`\nNew request received by messageManager:`)
   console.log(`messageType: ${ messageType }`)
   console.log(`toEmail: ${ toEmail }`)
   console.log(`toName: ${ toName }`)
+  console.log(`reason: ${ reason }`)
 
   const messageTemplate = messageTemplates.find((template) => template.messageType === messageType)
   if (messageTemplate === undefined) {
@@ -35,7 +36,8 @@ const messageManager = asyncHandler(async (req, res) => {
           "TemplateID": messageTemplate.templateID,
           "TemplateLanguage": true,
           "Variables": {
-            "toName": `${ toName }`
+            "toName": `${ toName }`,
+            "reason": reason !== undefined ? reason : ''
           }
         }
       ]
