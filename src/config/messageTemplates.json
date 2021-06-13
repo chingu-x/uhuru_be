@@ -12,6 +12,12 @@
     "templateID": 2956584,
     "templateLanguage": true
   }, {
+    "messageType": "CHINGU_APPLICATION_REJECTION",
+    "fromEmail": "support@chingu.io",
+    "fromName": "Chance & Jim",
+    "templateID": 2956616,
+    "templateLanguage": true
+  }, {
     "messageType": "SOLOPROJECT_SUBMISSION_ACK",
     "fromEmail": "support@chingu.io",
     "fromName": "Chance & Jim",
