@@ -23,5 +23,11 @@
     "fromName": "Chance & Jim",
     "templateID": 2955469,
     "templateLanguage": true
+  }, {
+    "messageType": "VOYAGE_SIGNUP_ACK",
+    "fromEmail": "support@chingu.io",
+    "fromName": "Chance & Jim",
+    "templateID": 2956835,
+    "templateLanguage": true
   }
 ]
