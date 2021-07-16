@@ -1,7 +1,6 @@
 const DiscordJS = require('discord.js')
 const asyncHandler = require('express-async-handler')
-const nodemailjet = require('node-mailjet')
-const messageTemplates = require('../config/messageTemplates.json')
+const notifyAdmin = require('./notifyAdmin.js')
 
 const addRoleToUser = asyncHandler(async (req, res) => {
   // Get the parameters
@@ -21,6 +20,8 @@ const addRoleToUser = asyncHandler(async (req, res) => {
       const allRoles = await guild.roles.fetch()
       const role = allRoles.cache.find(role => role.name == roleName)
       if (role == undefined) {
+        await notifyAdmin('ADDROLETO_USER_ERROR', 'addRoleToUser', 
+          `roleName: ${ roleName } is undefined.`)
         return res.status(500).json({ 
           message: `roleName: ${ roleName } is undefined.`,
           code: 500
@@ -39,6 +40,7 @@ const addRoleToUser = asyncHandler(async (req, res) => {
 
       // Add the role to the user
       const guildMember = await user.roles.add(role)
+      console.log(`Role successfully added to user`)
       return res.status(200).json({ 
         message: "Role successfully added to user",
         code: 200
