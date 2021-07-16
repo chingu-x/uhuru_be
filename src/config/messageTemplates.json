@@ -29,5 +29,11 @@
     "fromName": "Chance & Jim",
     "templateID": 2956835,
     "templateLanguage": true
+  }, {
+    "messageType": "ADDROLETO_USER_ERROR",
+    "fromEmail": "support@chingu.io",
+    "fromName": "UhuruBE",
+    "templateID": 3049421,
+    "templateLanguage": true
   }
 ]

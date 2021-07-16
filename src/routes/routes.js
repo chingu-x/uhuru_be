@@ -1,5 +1,5 @@
 const express = require('express')
-const { addRoleToUser } requires('../controllers/addRoleToUser')
+const { addRoleToUser } = require('../controllers/addRoleToUser')
 const { messageManager } = require('../controllers/messageManager')
 const { sendMail } = require('../controllers/sendMail')
 const { wakeUp } = require('../controllers/wakeup')
