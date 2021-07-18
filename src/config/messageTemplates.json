@@ -35,5 +35,11 @@
     "fromName": "UhuruBE",
     "templateID": 3049421,
     "templateLanguage": true
+  }, {
+    "messageType": "EMAIL_VOYAGE_PREP_INFO",
+    "fromEmail": "chance@chingu.io",
+    "fromName": "chance",
+    "templateID": 3050925,
+    "templateLanguage": true
   }
 ]
