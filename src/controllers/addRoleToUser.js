@@ -13,7 +13,6 @@ const addRoleToUser = asyncHandler(async (req, res) => {
 
   try {
     client.once('ready', async () => {
-      // Get the Guild
       const guild = await client.guilds.fetch(`${ process.env.DISCORD_GUILD_ID }`)
 
       // Locate the role to be assigned to the user
@@ -23,7 +22,7 @@ const addRoleToUser = asyncHandler(async (req, res) => {
         await notifyAdmin('ADDROLETO_USER_ERROR', 'addRoleToUser', 
           `roleName: ${ roleName } is undefined.`)
         return res.status(500).json({ 
-          message: `roleName: ${ roleName } is undefined.`,
+          message: `userName: ${ userName } roleName: ${ roleName } role is undefined.`,
           code: 500
         })
       }
@@ -32,8 +31,10 @@ const addRoleToUser = asyncHandler(async (req, res) => {
       const allUsers = await guild.members.fetch()
       const user = allUsers.find(member => member.user.username === userName)
       if (user == undefined) {
+        await notifyAdmin('ADDROLETO_USER_ERROR', 'addRoleToUser', 
+        `userName: ${ userName } is undefined.`)
         return res.status(500).json({ 
-          message: `userName: ${ userName } is undefined.`,
+          message: `userName: ${ userName } roleName: ${ roleName }  user name is undefined.`,
           code: 500
         })
       }
@@ -49,6 +50,8 @@ const addRoleToUser = asyncHandler(async (req, res) => {
   }
   catch(err) {
     console.log(err)
+    await notifyAdmin('ADDROLETO_USER_ERROR', 'addRoleToUser', 
+      `An error occurred processing userName: ${ userName } roleName: ${ roleName } err: ${ err }`)
     return res.status(500).json({ 
       message: `${ err }`,
       code: 500
@@ -60,6 +63,8 @@ const addRoleToUser = asyncHandler(async (req, res) => {
     await client.login(process.env.DISCORD_TOKEN)
   }
   catch (err) {
+    await notifyAdmin('ADDROLETO_USER_ERROR', 'addRoleToUser', 
+      `An error occurred processing userName: ${ userName } roleName: ${ roleName } err: ${ err }`)
     console.error(`Error logging into Discord. Token: ${ process.env.DISCORD_TOKEN }`)
     console.error(err)
   }
