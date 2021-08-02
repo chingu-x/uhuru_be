@@ -63,13 +63,13 @@
     "messageType": "SOLOPROJECT_ADVICE_4",
     "fromEmail": "jim@chingu.io",
     "fromName": "Jim",
-    "templateID": 9999999,
+    "templateID": 3082066,
     "templateLanguage": true
   }, {
     "messageType": "SOLOPROJECT_ADVICE_5",
     "fromEmail": "jim@chingu.io",
     "fromName": "Jim",
-    "templateID": 9999999,
+    "templateID": 3082221,
     "templateLanguage": true
   }, {
     "messageType": "SOLOPROJECT_ADVICE_6",
