@@ -41,5 +41,41 @@
     "fromName": "chance",
     "templateID": 3050925,
     "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_ADVICE_1",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 3081227,
+    "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_ADVICE_2",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim,",
+    "templateID": 3081582,
+    "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_ADVICE_3",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 3081725,
+    "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_ADVICE_4",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 3082066,
+    "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_ADVICE_5",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 3082221,
+    "templateLanguage": true
+  }, {
+    "messageType": "SOLOPROJECT_ADVICE_6",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 3083994,
+    "templateLanguage": true
   }
 ]
