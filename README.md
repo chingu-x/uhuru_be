@@ -1,12 +1,12 @@
 # uhuru_be
-[contributors-shield]: https://img.shields.io/github/contributors/jdmedlock/uhuru_be.svg?style=for-the-badge
-[contributors-url]: https://github.com/jdmedlock/uhuru_be/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jdmedlock/uhuru_be.svg?style=for-the-badge
-[forks-url]: https://github.com/jdmedlock/uhuru_be/network/members
-[stars-shield]: https://img.shields.io/github/stars/jdmedlock/uhuru_be.svg?style=for-the-badge
-[stars-url]: https://github.com/jdmedlock/uhuru_be/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jdmedlock/uhuru_be.svg?style=for-the-badge
-[issues-url]: https://github.com/jdmedlock/uhuru_be/issues
+[contributors-shield]: https://img.shields.io/github/contributors/chingu-x/uhuru_be.svg?style=for-the-badge
+[contributors-url]: https://github.com/chingu-x/uhuru_be/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/chingu-x/uhuru_be.svg?style=for-the-badge
+[forks-url]: https://github.com/chingu-x/uhuru_be/network/members
+[stars-shield]: https://img.shields.io/github/stars/chingu-x/uhuru_be.svg?style=for-the-badge
+[stars-url]: https://github.com/chingu-x/uhuru_be/stargazers
+[issues-shield]: https://img.shields.io/github/issues/chingu-x/uhuru_be.svg?style=for-the-badge
+[issues-url]: https://github.com/chingu-x/uhuru_be/issues
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
