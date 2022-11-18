@@ -66,8 +66,10 @@ The following environment variables must be set up for the app to run properly:
 | Key             | Value                                |
 |-----------------|--------------------------------------|
 | PORT            | <port-number (e.g. '3100')>          |
-| CLOUDINARY_URL  | cloudinary://<api-key>:<api-secret>  |
-| CLOUDINARY_NAME | <your 9-character unique cloud name> |
+| MAILJET_API_KEY | The API key registered in MailJet    |
+| MAILJET_SECRET_KEY | The secret key for Chingu required to use the MailJet API |
+| DISCORD_GUILD_ID | Id for Chingu's Discord server      |
+| DISCORD_TOKEN   | Discord API key                      |
 
 ## Release History
 
