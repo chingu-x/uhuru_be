@@ -30,6 +30,7 @@ app.use('/', restRoutes);
 
 apolloServer.applyMiddleware({ app })
 
-app.listen(process.env.PORT, () => {
-  console.log(`🚀 Server is running at http://localhost:${process.env.PORT}`)
+const serverPort = process.env.PORT || 3100
+app.listen(serverPort, () => {
+  console.log(`🚀 Server is listening on port: ${serverPort}`)
 })
