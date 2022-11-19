@@ -41,9 +41,9 @@ const removeRoleFromUser = asyncHandler(async (req, res) => {
 
       // Add the role to the user
       const guildMember = await user.roles.remove(role)
-      console.log(`Role successfully added to user`)
+      console.log(`Role successfully removed from user`)
       return res.status(200).json({ 
-        message: "Role successfully added to user",
+        message: "Role successfully removed from user",
         code: 200
       })
     })
