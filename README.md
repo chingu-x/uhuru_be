@@ -39,6 +39,7 @@ For all others and for current release dependencies please consult the
 | ExpressJS   | Frontend framework          |
 | GraphQL     | GraphQL API                 |
 | node-mailjet | Mailjet service API        |
+|             |                             |
 
 The following backend services are invoked using a REST API:
 
