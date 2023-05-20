@@ -24,7 +24,7 @@
 
 `uhuru_be` is the backend server responsible for automated email distribution
 to members of Chingu and maintenance of Discord roles. The primary consumer of
-these services is the uhuru application which can be found [here](https://github.com/chingu-x/uhurubot).
+these services is the uhurubot application which can be found [here](https://github.com/chingu-x/uhurubot).
 
 ## Application Architecture
 
