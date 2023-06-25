@@ -89,5 +89,11 @@
     "fromName": "Jim",
     "templateID": 3083994,
     "templateLanguage": true
+  }, {
+    "messageType": "VOYAGE_CERTIFICATE",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 4907752,
+    "templateLanguage": true
   }
-]
+  ]
