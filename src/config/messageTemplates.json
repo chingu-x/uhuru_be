@@ -36,6 +36,12 @@
     "templateID": 2955469,
     "templateLanguage": true
   }, {
+    "messageType": "PAIRPROG_SUBMISSION_ACK",
+    "fromEmail": "support@chingu.io",
+    "fromName": "Chance & Jim",
+    "templateID": 5030931,
+    "templateLanguage": true
+  }, {
     "messageType": "VOYAGE_SIGNUP_ACK",
     "fromEmail": "support@chingu.io",
     "fromName": "Chance & Jim",
