@@ -101,5 +101,11 @@
     "fromName": "Jim",
     "templateID": 4907752,
     "templateLanguage": true
+  }, {
+    "messageType": "GITHUB_PENDING_NOTIFICATION",
+    "fromEmail": "jim@chingu.io",
+    "fromName": "Jim",
+    "templateID": 5813950,
+    "templateLanguage": true
   }
-  ]
+]
