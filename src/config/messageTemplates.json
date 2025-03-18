@@ -1,55 +1,61 @@
 [
   {
     "messageType": "CHINGU_APPLICATION_ACK",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 2952634,
     "templateLanguage": true
   }, {
     "messageType": "CHINGU_APPLICATION_ACCEPTANCE",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 2956584,
     "templateLanguage": true
   }, {
     "messageType": "CHINGU_APPLICATION_ACCEPTANCE_SOLOPROJECT",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 3222704,
     "templateLanguage": true
   }, {
     "messageType": "CHINGU_APPLICATION_ACCEPTANCE_PO",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 3223441,
     "templateLanguage": true
   }, {
+    "messageType": "CHINGU_APPLICATION_ACCEPTANCE_SM",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
+    "templateID": 6818490,
+    "templateLanguage": true
+  }, {
     "messageType": "CHINGU_APPLICATION_REJECTION",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 2956616,
     "templateLanguage": true
   }, {
     "messageType": "SOLOPROJECT_SUBMISSION_ACK",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 2955469,
     "templateLanguage": true
   }, {
     "messageType": "PAIRPROG_SUBMISSION_ACK",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 5030931,
     "templateLanguage": true
   }, {
     "messageType": "VOYAGE_SIGNUP_ACK",
-    "fromEmail": "support@chingu.io",
-    "fromName": "Chance & Jim",
+    "fromEmail": "service@chingu.io",
+    "fromName": "Chingu",
     "templateID": 2956835,
     "templateLanguage": true
   }, {
     "messageType": "ADDROLETO_USER_ERROR",
-    "fromEmail": "support@chingu.io",
+    "fromEmail": "service@chingu.io",
     "fromName": "UhuruBE",
     "templateID": 3049421,
     "templateLanguage": true
