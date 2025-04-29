@@ -3,14 +3,15 @@ const nodemailjet = require("node-mailjet")
 const messageTemplates = require('../config/messageTemplates.json')
 
 const messageManager = asyncHandler(async (req, res) => {
-  const { messageType, toEmail, toName, toVoyage, toVoyageStartDate, reason } = req.body
+  const { messageType, toEmail, toName, toVoyage, toVoyageStart, toVoyageStartCT, reason } = req.body
 
   console.log(`\nNew request received by messageManager:`)
   console.log(`messageType: ${ messageType }`)
   console.log(`toEmail: ${ toEmail }`)
   console.log(`toName: ${ toName }`)
   console.log(`toVoyage: ${ toVoyage }`)
-  console.log(`toVoyageStartDate: ${ toVoyageStartDate }`)
+  console.log(`toVoyageStart: ${ toVoyageStart }`)
+  console.log(`toVoyageStartCT: ${ toVoyageStartCT }`)
   console.log(`reason: ${ reason }`)
 
   const messageTemplate = messageTemplates.find((template) => template.messageType === messageType)
@@ -40,7 +41,8 @@ const messageManager = asyncHandler(async (req, res) => {
           "Variables": {
             "toName": `${ toName }`,
             "toVoyage": toVoyage !== undefined ? toVoyage : '',
-            "toVoyageStartDate": toVoyageStartDate !== undefined ? toVoyageStartDate : '',
+            "toVoyageStart": toVoyageStart !== undefined ? toVoyageStart : '',
+            "toVoyageStartCT": toVoyageStartCT !== undefined ? toVoyageStartCT : '',
             "reason": reason !== undefined ? reason : ''
           }
         }
