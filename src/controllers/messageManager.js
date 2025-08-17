@@ -30,6 +30,10 @@ const messageManager = asyncHandler(async (req, res) => {
     .request({
       "Messages":[
         {
+          "From": {
+            "Email": "service@chingu.io",
+            "Name": "Chingu Admin Team"
+          },
           "To": [
             {
               "Email": `${ toEmail }`,
