@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "398d6d43-ee85-4950-917e-8fdfc2042597",
+		"name": "Uhuru_be Server Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14555763"
+	},
+	"item": [
+		{
+			"name": "Remove Role from User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Send Pair Prog. Signup Ack",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Send GitHub Team Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"messageType\": \"GITHUB_PENDING_NOTIFICATION\",\n    \"toEmail\": \"jdmedlock@gmail.com\",\n    \"toName\": \"Jim\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3100/sendMail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3100",
+					"path": [
+						"sendMail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
