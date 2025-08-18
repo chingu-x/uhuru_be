@@ -20,9 +20,13 @@ const notifyAdmin = asyncHandler(async (messageType, functionName, errorMessage)
     .request({
       "Messages":[
         {
+          "From": {
+            "Email": "service@chingu.io",
+            "Name": "Chingu Admin Team"
+          },
           "To": [
             {
-              "Email": `support@chingu.io`,
+              "Email": `service@chingu.io`,
               "Name": `UhuruBE`
             }
           ],
