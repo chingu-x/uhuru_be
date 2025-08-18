@@ -31,8 +31,8 @@ const messageManager = asyncHandler(async (req, res) => {
       "Messages":[
         {
           "From": {
-            "Email": "service@chingu.io",
-            "Name": "Chingu Admin Team"
+            "Email": `${ process.env.MAILJET_FROM_EMAIL }`,
+            "Name": `${ process.env.MAILJET_FROM_NAME }`
           },
           "To": [
             {
