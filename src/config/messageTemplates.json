@@ -27,7 +27,7 @@
     "messageType": "SOLOPROJECT_SUBMISSION_ACK",
     "fromEmail": "service@chingu.io",
     "fromName": "Chingu",
-    "templateID": 2955469,
+    "templateID": 7192917,
     "templateLanguage": true
   }, {
     "messageType": "VOYAGE_SIGNUP_ACK",
