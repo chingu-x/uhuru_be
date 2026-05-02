@@ -1,4 +1,4 @@
-# uhuru_be
+# uhuru_be - RETIRED
 [contributors-shield]: https://img.shields.io/github/contributors/chingu-x/uhuru_be.svg?style=for-the-badge
 [contributors-url]: https://github.com/chingu-x/uhuru_be/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/chingu-x/uhuru_be.svg?style=for-the-badge
